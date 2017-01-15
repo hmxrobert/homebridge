@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/sh
 
 if [ ! -e /root/.homebridge/ ]; then
    mkdir /root/.homebridge/
