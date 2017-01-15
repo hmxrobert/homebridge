@@ -27,6 +27,6 @@ fi
 dbus-daemon --system
 avahi-daemon -D
 
-homebridge
+homebridge &
 
 tail -f /dev/null
