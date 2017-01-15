@@ -1,4 +1,4 @@
-FROM ALPINE:3.5
+FROM alpine:3.5
 MAINTAINER hmxrobert
 
 RUN apk upgrade --update
@@ -11,6 +11,6 @@ RUN mkdir /home/.homebridge
 ADD init.sh /
 RUN chmod +x /init.sh
 
-EXPORT 5353 51826
+EXPOSE 5353 51826
 
 CMD ["/init.sh"]
