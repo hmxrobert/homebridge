@@ -18,4 +18,3 @@ EXPOSE 5353/udp 51826
 VOLUME /mnt/homebridge/
 
 CMD ["/init.sh"]
-#CMD ["/bin/sh"]
