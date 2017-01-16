@@ -1,5 +1,9 @@
 #!/bin/sh
 
+if [ ! -e /var/run/dbus/ ]; then
+   mkdir /var/run/dbus/
+fi
+
 if [ ! -e /root/.homebridge/ ]; then
    mkdir /root/.homebridge/
 fi
@@ -12,8 +16,12 @@ if [ ! -e /root/.homebridge/config.json ]; then
   ln -s /mnt/homebridge/config.json /root/.homebridge/config.json
 fi
 
-if [ -e /var/run/dbus_pid ]; then
-  rm /var/run/dbus_pid
+if [ ! -e /var/run/dbus/ ]; then
+   mkdir /var/run/dbus/
+fi
+
+if [ -e /var/run/dbus/pid ]; then
+  rm /var/run/dbus/pid
 fi
 
 if [ -e /var/run/dbus/system_bus_socket ]; then
